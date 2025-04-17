@@ -120,7 +120,7 @@ fn poseidon_sponge<
 }
 
 /// A Poseidon sponge.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Sponge<
     F: Field,
     PoseidonChip: PoseidonSpongeInstructions<F, S, D, T, RATE>,
