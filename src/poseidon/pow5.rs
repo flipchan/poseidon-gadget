@@ -57,7 +57,7 @@ impl<F: Field, const WIDTH: usize, const RATE: usize> Pow5Chip<F, WIDTH, RATE> {
     // necessary for the permutation.
     pub fn configure<S: Spec<F, WIDTH, RATE>>(
         meta: &mut ConstraintSystem<F>,
-        state: [Column<Advice>; WIDTH],
+        pub state: [Column<Advice>; WIDTH],
         partial_sbox: Column<Advice>,
         rc_a: [Column<Fixed>; WIDTH],
         rc_b: [Column<Fixed>; WIDTH],
